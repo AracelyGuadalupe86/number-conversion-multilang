@@ -358,7 +358,7 @@ Para integración con CI/CD:
 
 El repositorio público del proyecto se encuentra disponible en:
 
-**https://github.com/[TU-USUARIO]/number-conversion-multilang**
+**https://github.com/AracelyGuadalupe86/number-conversion-multilang**
 
 ### Estructura del Repositorio
 
@@ -435,7 +435,7 @@ number-conversion-multilang/
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/[TU-USUARIO]/number-conversion-multilang.git
+git clone https://github.com/AracelyGuadalupe86/number-conversion-multilang.git
 cd number-conversion-multilang
 
 # Ejecutar versión 1 de Ruby
