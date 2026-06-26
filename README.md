@@ -4,17 +4,32 @@ Este proyecto contiene implementaciones de conversión de números a letras en o
 
 ## Estructura del Proyecto
 
+Este proyecto utiliza una estructura de ramas por lenguaje de programación. Cada rama contiene las tres versiones de implementación para ese lenguaje específico.
+
+### Ramas Disponibles
+
+- **ruby** - Implementación en Ruby
+- **perl** - Implementación en Perl
+- **node** - Implementación en Node.js
+- **dotnet** - Implementación en .NET 10
+- **golang** - Implementación en Golang
+- **java** - Implementación en Java
+- **cpp** - Implementación en C++
+- **rust** - Implementación en Rust
+
+### Versiones por Lenguaje
+
 Para cada lenguaje de programación, se han implementado tres versiones:
 
-### Versión 1: Consumo de Servicio SOAP
+#### Versión 1: Consumo de Servicio SOAP
 Consume el servicio web SOAP público de DataAccess para convertir números a palabras en inglés.
 
 **Servicio:** https://www.dataaccess.com/webservicesserver/NumberConversion.wso?WSDL
 
-### Versión 2: Consumo de Servicio SOAP + Traducción
+#### Versión 2: Consumo de Servicio SOAP + Traducción
 Consume el servicio web SOAP y traduce el resultado del inglés al español utilizando librerías de traducción.
 
-### Versión 3: Implementación Nativa
+#### Versión 3: Implementación Nativa
 Implementa la conversión de números a letras en español utilizando librerías nativas del lenguaje de programación, sin depender de servicios externos.
 
 ## Lenguajes Implementados
@@ -30,18 +45,29 @@ Implementa la conversión de números a letras en español utilizando librerías
 
 ## Instalación y Ejecución
 
-### Ruby
+### Clonar el Repositorio
+
 ```bash
-cd ruby
+git clone https://github.com/AracelyGuadalupe86/number-conversion-multilang.git
+cd number-conversion-multilang
+```
+
+### Ejecutar Versiones por Lenguaje
+
+Para ejecutar las versiones de un lenguaje específico, primero cambia a la rama correspondiente:
+
+#### Ruby
+```bash
+git checkout ruby
 bundle install
 ruby version1.rb 10
 ruby version2.rb 10
 ruby version3.rb 10
 ```
 
-### Perl
+#### Perl
 ```bash
-cd perl
+git checkout perl
 cpan SOAP::Lite
 cpan Lingua::Translate
 cpan Lingua::ES::Numeros
@@ -50,18 +76,18 @@ perl version2.pl 10
 perl version3.pl 10
 ```
 
-### Node.js
+#### Node.js
 ```bash
-cd node
+git checkout node
 npm install
 node version1.js 10
 node version2.js 10
 node version3.js 10
 ```
 
-### .NET 10
+#### .NET 10
 ```bash
-cd dotnet
+git checkout dotnet
 dotnet restore Version1.csproj
 dotnet run --project Version1.csproj -- 10
 dotnet restore Version2.csproj
@@ -70,27 +96,27 @@ dotnet restore Version3.csproj
 dotnet run --project Version3.csproj -- 10
 ```
 
-### Golang
+#### Golang
 ```bash
-cd golang
+git checkout golang
 go mod download
 go run version1.go 10
 go run version2.go 10
 go run version3.go 10
 ```
 
-### Java
+#### Java
 ```bash
-cd java
+git checkout java
 mvn install
 mvn exec:java -Dexec.mainClass="Version1" -Dexec.args="10"
 mvn exec:java -Dexec.mainClass="Version2" -Dexec.args="10"
 mvn exec:java -Dexec.mainClass="Version3" -Dexec.args="10"
 ```
 
-### C++
+#### C++
 ```bash
-cd cpp
+git checkout cpp
 # Instalar dependencias (Ubuntu/Debian)
 sudo apt-get install libcurl4-openssl-dev libtinyxml2-dev
 
@@ -105,9 +131,9 @@ g++ version3.cpp -o version3
 ./version3 10
 ```
 
-### Rust
+#### Rust
 ```bash
-cd rust
+git checkout rust
 cargo build --bin version1
 cargo run --bin version1 -- 10
 cargo build --bin version2
@@ -118,12 +144,13 @@ cargo run --bin version3 -- 10
 
 ## Flujo de Trabajo
 
-Este proyecto utiliza **GitHub Flow** como metodología de control de versiones:
+Este proyecto utiliza **GitHub Flow** como metodología de control de versiones con una estructura de ramas por lenguaje:
 
-1. Todas las funcionalidades se desarrollan en ramas `feature/`
-2. Se realizan pull requests para revisión de código
-3. Después de aprobación, se fusionan a la rama `main`
-4. La rama `main` siempre está en estado estable
+1. Cada lenguaje tiene su propia rama (ruby, perl, node, dotnet, golang, java, cpp, rust)
+2. Cada rama contiene las tres versiones de implementación para ese lenguaje
+3. La rama `main` contiene la documentación general del proyecto
+4. Para trabajar con un lenguaje específico, se cambia a la rama correspondiente
+5. Los cambios en cada rama se pueden subir mediante pull requests o directamente
 
 ## Documentación
 
